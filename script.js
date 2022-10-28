@@ -23,7 +23,13 @@ function imageLoaded() {
 // Helper Function to Set Attributes on DOM Elements
 function setAttributes(element, attributes) {
     for (const key in attributes) {
-        element.setAttribute(key, attributes[key])
+        console.log(key);
+        console.log(attributes[key]);
+        if (key == 'title' & !attributes[key]){
+            element.setAttribute(key, "Click to see the photo!");
+        } else {
+            element.setAttribute(key, attributes[key]);
+        }
     }
 }
 
